@@ -779,6 +779,7 @@ a {
     .branding-text .org-sub {
         font-size: 13px;
     }
+
 }
 
 /* Tablet */
@@ -806,6 +807,12 @@ a {
 
 /* Mobile specific */
 @media(max-width: 899px) {
+    .topbar .container{
+        padding: 25px;
+    }
+    .branding{
+        gap: 25px;
+    }
     .main-nav .nav-inner {
         flex-wrap: wrap;
     }
@@ -852,9 +859,20 @@ a {
     .top-actions {
         justify-content: flex-end;
     }
+    .socials{
+        display: none;
+    }
 
     .flags {
         display: none;
+    }
+    .quick-cards{
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      flex: grow 1;;
+      min-width: 90%;
+
     }
     .hero-banner, .event-card, .quick-cards, .news-item, .donate-section{
         max-width: 95%;
@@ -870,12 +888,14 @@ a {
         align-items: center;
         gap: 15px;
         text-align: center;
+        padding: 20px;
     }
 
     .branding {
         width: 100%;
         justify-content: center;
         text-align: center;
+        gap: 25px;
     }
 
     .top-actions {
@@ -885,7 +905,9 @@ a {
 
     .search-wrap {
         flex: 1;
-        max-width: 300px;
+        max-width: 400px;
+        place-content: end;
+        margin-top: 10px;
     }
 
     .socials {
