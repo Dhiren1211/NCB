@@ -414,7 +414,7 @@ a {
 
 /* QUICK CARDS */
 .quick-cards {
-    display: grid;
+   display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     position: absolute;
@@ -492,6 +492,8 @@ a {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 25px;
+    margin: auto;
+    place-items: center;
 }
 
 .event-card {
@@ -504,6 +506,7 @@ a {
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100%;
 }
 
 .event-card:hover {
@@ -559,6 +562,7 @@ a {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 25px;
+    place-items: center;
 }
 
 .news-item {
@@ -571,6 +575,7 @@ a {
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100%;
 }
 
 .news-item:hover {
@@ -620,9 +625,13 @@ a {
 }
 
 .program-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    padding: 2px;
+    margin: auto;
+    place-items: center;
+    justify-content: center;
 }
 
 .program-card {
@@ -639,6 +648,7 @@ a {
     align-items: center;
     justify-content: center;
     min-height: 140px;
+    min-width: 150px;
 }
 
 .program-card:hover {
@@ -669,6 +679,7 @@ a {
     text-align: center;
     margin: 60px 0;
     box-shadow: 0 8px 30px rgba(11, 95, 168, 0.3);
+    
 }
 
 .donate-section p {
@@ -774,8 +785,9 @@ a {
 @media(min-width: 768px) and (max-width: 1023px) {
     .quick-cards {
         grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        bottom: -80px;
+        bottom: -130px;
+        max-width: 95%;
+        min-width: 95%;
     }
 
     .card {
@@ -844,6 +856,11 @@ a {
     .flags {
         display: none;
     }
+    .hero-banner, .event-card, .quick-cards, .news-item, .donate-section{
+        max-width: 95%;
+        min-width: 95%;
+        place-self: center;
+    }
 }
 
 /* Small mobile devices */
@@ -878,6 +895,8 @@ a {
     .hero-banner {
         padding: 60px 20px;
         min-height: 350px;
+        max-width: 95%;
+        place-self: center;
     }
 
     .hero-text h1 {
@@ -900,11 +919,13 @@ a {
         max-width: 280px;
     }
 
-    .quick-cards {
+    .quick-cards, .event-card, .news-item {
         grid-template-columns: 1fr;
         gap: 20px;
         position: relative;
         bottom: -40px;
+        max-width: 90%;
+        min-width: 90%;
     }
 
     .main_top_container {
@@ -922,7 +943,11 @@ a {
     }
 
     .program-cards {
-        grid-template-columns: repeat(2, 1fr);
+        max-width: fit-content;
+        min-width: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+
     }
 
     .upcoming-events,
@@ -935,11 +960,12 @@ a {
     .news-notices h2,
     .programs h2 {
         font-size: 2rem;
+        text-align: center;
     }
 
     .donate-section {
         padding: 40px 20px;
-        margin: 40px 0;
+        margin: 40px 10px;
     }
 
     .donate-section p {
@@ -1351,9 +1377,4 @@ body.menu-open {
 .main-nav .nav-left,
 .main-nav .nav-right {
     transition: all 0.3s ease;
-
 }
-
-
-
-
