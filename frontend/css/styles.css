@@ -319,7 +319,7 @@ a {
 
 /* HERO BANNER */
 .hero-banner {
-    background-image: url(./assests/Images/busanbridge.jpg);
+    background-image: url('/assests/Images/busanbridge.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1353,3 +1353,4 @@ body.menu-open {
     transition: all 0.3s ease;
 
 }
+
