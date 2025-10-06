@@ -319,7 +319,7 @@ a {
 
 /* HERO BANNER */
 .hero-banner {
-    background-image: url(https://Dhiren1211.github.io/NCB/assests/Images/busanbridge.jpg);
+    background-image: url(https://github.com/Dhiren1211/NCB/blob/main/assests/Images/busanbridge.jpg?raw=true);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1353,6 +1353,7 @@ body.menu-open {
     transition: all 0.3s ease;
 
 }
+
 
 
 
