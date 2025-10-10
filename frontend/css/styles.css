@@ -510,7 +510,10 @@ a {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
 }
-
+.event-btn{
+margin-top: 10px;
+height: 60px;
+}
 /* QUICK CARDS */
 .quick-cards {
     display: grid;
@@ -1031,25 +1034,284 @@ a {
 
 }
 
-.donate-section p {
+/* News Modal Styles */
+.news-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
+}
+
+.news-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.news-modal-content {
+    position: relative;
+    background: white;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 700px;
+    max-height: 90vh;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #e63946;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.news-modal-close:hover {
+    background: #c1121f;
+}
+
+.news-modal-header {
+    padding: 2rem 2rem 1rem;
+    border-bottom: 1px solid #e9ecef;
+    background: #f8f9fa;
+}
+
+.news-modal-title {
+    color: #2b2d42;
+    margin: 0 0 0.5rem 0;
     font-size: 1.5rem;
-    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.news-modal-date {
+    color: #6c757d;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.news-modal-body {
+    padding: 2rem;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.news-modal-message {
+    line-height: 1.6;
+    color: #495057;
+}
+
+.news-modal-message p {
+    margin-bottom: 1rem;
+}
+
+.news-modal-message ul {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+
+.news-modal-message li {
+    margin-bottom: 0.5rem;
+}
+
+.news-modal-message strong {
+    color: #2b2d42;
     font-weight: 600;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.donate-section .btn-primary {
-    background: #ffb400;
-    color: #0b3a6f;
-    padding: 16px 40px;
+.news-modal-footer {
+    padding: 1rem 2rem;
+    border-top: 1px solid #e9ecef;
+    background: #f8f9fa;
+    text-align: right;
+}
+
+/* Animation for modal */
+.news-modal-content {
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .news-modal-content {
+        margin: 1rem auto;
+        width: 95%;
+        max-height: 95vh;
+    }
+    
+    .news-modal-header,
+    .news-modal-body,
+    .news-modal-footer {
+        padding: 1.5rem;
+    }
+    
+    .news-modal-title {
+        font-size: 1.25rem;
+    }
+}
+/* Join NCB Section Styles */
+.join-section {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(230, 57, 70, 0.3);
+}
+
+.join-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.join-content > p {
     font-size: 1.2rem;
-    box-shadow: 0 6px 20px rgba(255, 180, 0, 0.4);
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.donate-section .btn-primary:hover {
-    background: #e6a200;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(255, 180, 0, 0.5);
+.join-benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.benefit-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.benefit-item i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #ffd166;
+}
+
+.benefit-item span {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.join-btn {
+    background: #cb8f02;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 1rem 0;
+}
+
+.join-btn:hover {
+    background: #1a1b2e;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(43, 45, 66, 0.4);
+}
+
+.join-note {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 1rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .join-section {
+        padding: 2rem 1rem;
+    }
+    
+    .join-content h2 {
+        font-size: 2rem;
+    }
+    
+    .join-content > p {
+        font-size: 1.1rem;
+    }
+    
+    .join-benefits {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .benefit-item {
+        padding: 0.8rem;
+    }
+    
+    .benefit-item i {
+        font-size: 1.5rem;
+    }
+    
+    .benefit-item span {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .join-benefits {
+        grid-template-columns: 1fr;
+    }
+    
+    .join-content h2 {
+        font-size: 1.8rem;
+    }
 }
 
 /* FOOTER */
@@ -1349,15 +1611,6 @@ a {
         text-align: center;
     }
 
-    .donate-section {
-        padding: 40px 20px;
-        margin: 40px 10px;
-    }
-
-    .donate-section p {
-        font-size: 1.3rem;
-    }
-
     .notice-inner {
         flex-direction: column;
         align-items: flex-start;
@@ -1560,15 +1813,6 @@ body.menu-open {
 }
 
 /* Gallery and President Section*/
-
-
-
-
-
-
-
-
-
 
 
 /* Mobile Menu Styles - FIXED: Hidden by default */
