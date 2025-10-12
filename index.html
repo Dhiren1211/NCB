@@ -13,8 +13,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <!-- Meta -->
     <meta name="description" content="NCB- Nepali Communituy in Busan">
-    <link rel="stylesheet" href="./frontend/css/styles.css">
-    <link rel="stylesheet" href="./frontend/css/slider.css">
+    <link rel="stylesheet" href="./frontend/css/styles1.css">
+
+    <!-- <link rel="stylesheet" href="./frontend/css/slider.css"> -->
     <style>
         /* Additional styles for the read more functionality */
         .message-container {
@@ -58,6 +59,33 @@
         .message-container.expanded .fade-overlay {
             opacity: 0;
         }
+
+        /* Executive Committee Styles */
+        .executive-committee-container {
+            display: none;
+            padding: 2rem 0;
+        }
+
+        .executive-committee-container.active {
+            display: block;
+        }
+
+        .back-to-home {
+            display: block;
+            margin: 2rem auto;
+            padding: 10px 20px;
+            background: #0a348f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .back-to-home:hover {
+            background: #0045b5;
+        }
     </style>
 </head>
 
@@ -98,15 +126,16 @@
         <nav class="main-nav">
             <div class="container nav-inner">
                 <ul class="nav-menu">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="/">Home</a></li>
 
                     <li class="has-sub">
                         <a href="#">About Us</a>
                         <ul class="dropdown">
                             <li><a href="#">History</a></li>
                             <li><a href="#">Mission & Vision</a></li>
-                            <li><a href="#">Leadership</a></li>
-                            <li><a href="#">Executive Committee</a></li>
+                            <li><a href="./frontend/html/executive-committee.html">Leadership</a></li>
+                            <li><a href="./frontend/html/executive-committee.html" class="nav-link" >Executive Committee</a>
+                            </li>
                         </ul>
                     </li>
 
@@ -114,8 +143,8 @@
                         <a href="#">Media</a>
                         <ul class="dropdown">
                             <li><a href="#">Press Releases</a></li>
-                            <li><a href="#">News</a></li>
-                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#news">News</a></li>
+                            <li><a href="#Gallery">Gallery</a></li>
                         </ul>
                     </li>
 
@@ -127,8 +156,8 @@
                         </ul>
                     </li>
 
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#contact">Contact</a></li>
                     <li><a class="cta" href="#">NCB Portal</a></li>
                 </ul>
 
@@ -219,7 +248,7 @@
         </section>
 
         <!-- News & Notices -->
-        <section class="news-notices">
+        <section id="news" class="news-notices">
             <h2>News & Notices</h2>
             <div class="news-list">
                 <div class="news-item">
@@ -348,8 +377,9 @@
                     maintain our community center.</p>
             </div>
         </section>
-    </main>
 
+
+    </main>
     <!-- FOOTER -->
     <footer class="site-footer">
         <div class="container footer-grid">
@@ -393,8 +423,8 @@
         </div>
     </footer>
     <script src="./frontend/js/script.js">
+
     </script>
-    <script src="./frontend/js/slider.js"></script>
 </body>
 
 </html>
