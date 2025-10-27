@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <!-- Meta -->
     <meta name="description" content="NCB- Nepali Communituy in Busan">
-    <link rel="stylesheet" href="./frontend/css/styles1.css">
+    <link rel="stylesheet" href="./frontend/css/styles.css">
 
     <!-- <link rel="stylesheet" href="./frontend/css/slider.css"> -->
     <style>
@@ -96,10 +96,10 @@
             <div class="container">
                 <div class="branding">
                     <div class="logo">
-                        <img src="./assests/Images/NCB_logo.png" alt="NCB Logo" style="width: 120px;">
+                        <img src="./assets/Images/NCB_logo.png" alt="NCB Logo" style="width: 120px;">
                     </div>
                     <div class="branding-text">
-                        <div class="org-title">Nepali Community In Busan</div>
+                        <div class="org-title">Nepalese Community In Busan</div>
                         <div class="org-sub">NCB</div>
                     </div>
                 </div>
@@ -110,7 +110,7 @@
                         <button id="search-btn">Search</button>
                     </div>
                     <div class="flags">
-                        <img src="./assests/Images/np_flag.gif" alt="Nepal" srcset="" style="width: 50px;">
+                        <img src="./assets/Images/np_flag.gif" alt="Nepal" srcset="" style="width: 50px;">
                     </div>
                     <div class="socials">
                         <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
@@ -123,49 +123,51 @@
         </div>
 
         <!-- NAV -->
-        <nav class="main-nav">
-            <div class="container nav-inner">
-                <ul class="nav-menu">
-                    <li><a href="/">Home</a></li>
+      <nav class="main-nav">
+  <div class="container nav-inner">
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
 
-                    <li class="has-sub">
-                        <a href="#">About Us</a>
-                        <ul class="dropdown">
-                            <li><a href="#">History</a></li>
-                            <li><a href="#">Mission & Vision</a></li>
-                            <li><a href="./frontend/html/executive-committee.html">Leadership</a></li>
-                            <li><a href="./frontend/html/executive-committee.html" class="nav-link" >Executive Committee</a>
-                            </li>
-                        </ul>
-                    </li>
+      <li class="has-sub">
+        <a href="#">About Us</a>
+        <ul class="dropdown">
+          <li><a href="#">History</a></li>
+          <li><a href="#">Mission & Vision</a></li>
+          <li><a href="./frontend/html/executive-committee.html">Executive Committee</a></li>
+          <li><a href="./frontend/html/founding_members.html">Founding Members</a></li>
+          <li><a href="./frontend/html/executive-committee.html">Advisory Board</a></li>
+          <li><a href="./frontend/html/executive-committee.html">Associate Committee</a></li>
+        </ul>
+      </li>
 
-                    <li class="has-sub">
-                        <a href="#">Media</a>
-                        <ul class="dropdown">
-                            <li><a href="#">Press Releases</a></li>
-                            <li><a href="#news">News</a></li>
-                            <li><a href="#Gallery">Gallery</a></li>
-                        </ul>
-                    </li>
+      <li class="has-sub">
+        <a href="#">Media</a>
+        <ul class="dropdown">
+          <li><a href="#">Press Releases</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#Gallery">Gallery</a></li>
+        </ul>
+      </li>
 
-                    <li class="has-sub">
-                        <a href="#">Resources</a>
-                        <ul class="dropdown">
-                            <li><a href="#">Documents</a></li>
-                            <li><a href="#">Publications</a></li>
-                        </ul>
-                    </li>
+      <li class="has-sub">
+        <a href="#">Resources</a>
+        <ul class="dropdown">
+          <li><a href="#">Documents</a></li>
+          <li><a href="#">Publications</a></li>
+        </ul>
+      </li>
 
-                    <li><a href="#events">Events</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a class="cta" href="#">NCB Portal</a></li>
-                </ul>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="cta" href="#">NCB Portal</a></li>
+    </ul>
 
-                <button class="mobile-nav-toggle" aria-label="Toggle navigation">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </nav>
+    <button class="mobile-nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
 
     </header>
     <!-- NOTICE BAR -->
@@ -225,25 +227,11 @@
                 </div>
             </div>
         </div>
-        <!-- Upcoming Events -->
+        <!-- Upcoming Events (populated from backend) -->
         <section class="upcoming-events">
             <h2>Upcoming Events</h2>
-            <div class="events-list">
-                <div class="event-card">
-                    <h4>May 10 Dashain Celebration</h4>
-                    <p>Busan</p>
-                    <button class="rsvp">RSVP</button>
-                </div>
-                <div class="event-card">
-                    <h4>Blood Donation Drive</h4>
-                    <p>Haeundae, Busan | June 25, 2024</p>
-                    <button class="rsvp">RSVP</button>
-                </div>
-                <div class="event-card">
-                    <h4>Teej Festival</h4>
-                    <p>Busan in ga. Busan | June 15, 2024</p>
-                    <button class="rsvp">RSVP</button>
-                </div>
+            <div class="events-list" aria-live="polite">
+                <p class="events-loading">Loading upcoming events…</p>
             </div>
         </section>
 
@@ -301,7 +289,7 @@
             <div class="right-president">
                 <h2>President</h2>
                 <div class="president-card">
-                    <img src="./assests/uploads/president.jpg" alt="President">
+                    <img src="./assets/uploads/president.jpg" alt="President">
                     <div class="president-info">
                         <h3>Ashok Acharya</h3>
                         <p>President, Nepalese Community in Busan (NCB)</p>
@@ -352,7 +340,7 @@
         <section class="join-section">
             <div class="join-content">
                 <h2>Join Our Community</h2>
-                <p>Become part of the Nepali community in Busan and access exclusive benefits, events, and support
+                <p>Become part of the Nepalese community in Busan and access exclusive benefits, events, and support
                     networks.</p>
                 <div class="join-benefits">
                     <div class="benefit-item">
@@ -385,9 +373,9 @@
         <div class="container footer-grid">
             <div class="footer-col">
                 <div class="branding">
-                    <div class="logo_small " style="background-color: rgb(237, 237, 237); border-radius: 6px;">
-                        <img src="./assests/Images/NCB_logo.png" alt="NCB Logo" style="width: 50px;">
-                    </div>
+                    <!-- <div class="logo_small " style="background-color: rgb(237, 237, 237); border-radius: 6px;">
+                        <img src="./assets/Images/NCB_logo.png" alt="NCB Logo" style="width: 50px;">
+                    </div> -->
                     <div class="branding-text">
                         <div class="org-title">NCB </div>
                     </div>
